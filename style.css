@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background-color: #fffffe;
+  background-color: #0f0e17;
   color: #2e2f3e;
   display: flex;
   justify-content: center;
@@ -19,7 +19,8 @@ body {
 }
 
 .wrapper {
-  max-width: 1000px;
+  max-width: 1300px;
+  background-color: #fffffe;
 }
 
 .header__link {
@@ -38,10 +39,11 @@ body {
 .header__logo {
   margin: 0;
   width: 70%;
-  max-height: 500px;
   margin-top: 4rem;
   margin-left: 2rem;
   position: relative;
+  max-width: 277px;
+  max-height: 350px;
 }
 
 .header-logo__image {
@@ -99,6 +101,13 @@ body {
   font-weight: 400;
 }
 
+.header-social-bar {
+  position: sticky;
+  top: 0;
+  list-style: none;
+  padding: 0;
+}
+
 .content {
   width: 85%;
   margin-left: auto;
@@ -108,6 +117,8 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 1.1rem;
+  justify-content: space-evenly;
+  margin-bottom: 3.5rem;
 }
 
 .chapter {
@@ -115,10 +126,9 @@ body {
   color: #a7a9be;
   padding: 1.5rem;
   border-radius: 3px;
-}
-
-.chapter:last-child {
-  margin-bottom: 3.5rem;
+  max-width: 350px;
+  flex: 1;
+  min-width: 285px;
 }
 
 .chapter-title {
@@ -156,10 +166,13 @@ body {
 }
 
 .footer {
+  font-size: 1.1rem;
+}
+
+.footer__content {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.1rem;
 }
 
 .footer__title {
@@ -171,9 +184,19 @@ body {
   border: solid 3px #0f0e17;
   border-radius: 3px;
   margin-top: 0.5rem;
+  padding: 0.75rem 0.5rem;
+}
+
+.footer-vip-list__entry:hover {
+  color: #fffffe;
+  background-color: #ff8906;
+}
+
+.footer-vip-list__link {
+  color: inherit;
+  text-decoration: none;
   display: flex;
   justify-content: space-between;
-  padding: 0.75rem 0.5rem;
 }
 
 .footer-vip-list {
@@ -199,11 +222,37 @@ body {
 }
 
 .address {
-  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
   margin-top: 3.5rem;
   text-align: center;
+  color: #fffffe;
+  background: #0f0e17;
 }
 
 .address__entry {
   display: block;
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    margin-bottom: 4rem;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 4rem;
+  }
+
+  .header__logo {
+    flex-basis: 35%;
+    margin-left: 0;
+  }
+
+  .header-title {
+    flex: 1;
+    margin-bottom: 0px;
+  }
 }
