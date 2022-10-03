@@ -1,8 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background-color: #0f0e17;
+  background: #fffffe;
+  background: linear-gradient(to bottom, #fffffe 80%, #0f0e17 80%);
   color: #2e2f3e;
   display: flex;
   justify-content: center;
@@ -21,6 +26,9 @@ body {
 .wrapper {
   max-width: 1300px;
   background-color: #fffffe;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .header__link {
@@ -102,10 +110,26 @@ body {
 }
 
 .header-social-bar {
-  position: sticky;
-  top: 0;
   list-style: none;
-  padding: 0;
+  display: flex;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+
+.header-social-bar__entry {
+  width: 32px;
+  height: 32px;
+  background-color: #ff8906;
+  color: #fffffe;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+.header-social-bar__link {
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .content {
